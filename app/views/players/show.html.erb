@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @player.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @player.last_name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @player.position %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @player.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @player.weight %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= @player.birth_date %>
+</p>
+
+<p>
+  <strong>Colleges:</strong>
+  <%= @player.colleges %>
+</p>
+
+<p>
+  <strong>Draft:</strong>
+  <%= @player.draft %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @player.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>
