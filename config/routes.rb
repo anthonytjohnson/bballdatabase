@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :player_stats
   resources :teams
   resources :players, except: [:index]
   root to: 'players#index'

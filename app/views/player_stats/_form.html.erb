@@ -1,0 +1,32 @@
+
+<%= simple_form_for(@player_stat) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :player %>
+    <%= f.association :team %>
+    <%= f.input :year %>
+    <%= f.input :league %>
+    <%= f.input :games %>
+    <%= f.input :games_started %>
+    <%= f.input :minutes %>
+    <%= f.input :field_goals %>
+    <%= f.input :field_goals_attempted %>
+    <%= f.input :three_point %>
+    <%= f.input :three_point_attempted %>
+    <%= f.input :free_throws %>
+    <%= f.input :field_throws_attempted %>
+    <%= f.input :off_rebounds %>
+    <%= f.input :def_rebounds %>
+    <%= f.input :assists %>
+    <%= f.input :steals %>
+    <%= f.input :blocks %>
+    <%= f.input :turnovers %>
+    <%= f.input :personal_fouls %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

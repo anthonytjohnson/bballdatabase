@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_20_091107) do
+ActiveRecord::Schema.define(version: 2022_01_22_235624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "player_stats", force: :cascade do |t|
+    t.bigint "player_id", null: false
+    t.bigint "team_id", null: false
+    t.integer "year"
+    t.string "league"
+    t.integer "games"
+    t.integer "games_started"
+    t.integer "minutes"
+    t.integer "field_goals"
+    t.integer "field_goals_attempted"
+    t.integer "three_point"
+    t.integer "three_point_attempted"
+    t.integer "free_throws"
+    t.integer "field_throws_attempted"
+    t.integer "off_rebounds"
+    t.integer "def_rebounds"
+    t.integer "assists"
+    t.integer "steals"
+    t.integer "blocks"
+    t.integer "turnovers"
+    t.integer "personal_fouls"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_player_stats_on_player_id"
+    t.index ["team_id"], name: "index_player_stats_on_team_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "first_name"
@@ -38,4 +65,6 @@ ActiveRecord::Schema.define(version: 2022_01_20_091107) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "player_stats", "players"
+  add_foreign_key "player_stats", "teams"
 end

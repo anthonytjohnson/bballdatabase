@@ -1,0 +1,104 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @player_stat.player_id %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @player_stat.team_id %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @player_stat.year %>
+</p>
+
+<p>
+  <strong>League:</strong>
+  <%= @player_stat.league %>
+</p>
+
+<p>
+  <strong>Games:</strong>
+  <%= @player_stat.games %>
+</p>
+
+<p>
+  <strong>Games started:</strong>
+  <%= @player_stat.games_started %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @player_stat.minutes %>
+</p>
+
+<p>
+  <strong>Field goals:</strong>
+  <%= @player_stat.field_goals %>
+</p>
+
+<p>
+  <strong>Field goals attempted:</strong>
+  <%= @player_stat.field_goals_attempted %>
+</p>
+
+<p>
+  <strong>Three point:</strong>
+  <%= @player_stat.three_point %>
+</p>
+
+<p>
+  <strong>Three point attempted:</strong>
+  <%= @player_stat.three_point_attempted %>
+</p>
+
+<p>
+  <strong>Free throws:</strong>
+  <%= @player_stat.free_throws %>
+</p>
+
+<p>
+  <strong>Field throws attempted:</strong>
+  <%= @player_stat.field_throws_attempted %>
+</p>
+
+<p>
+  <strong>Off rebounds:</strong>
+  <%= @player_stat.off_rebounds %>
+</p>
+
+<p>
+  <strong>Def rebounds:</strong>
+  <%= @player_stat.def_rebounds %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @player_stat.assists %>
+</p>
+
+<p>
+  <strong>Steals:</strong>
+  <%= @player_stat.steals %>
+</p>
+
+<p>
+  <strong>Blocks:</strong>
+  <%= @player_stat.blocks %>
+</p>
+
+<p>
+  <strong>Turnovers:</strong>
+  <%= @player_stat.turnovers %>
+</p>
+
+<p>
+  <strong>Personal fouls:</strong>
+  <%= @player_stat.personal_fouls %>
+</p>
+
+<%= link_to 'Edit', edit_player_stat_path(@player_stat) %> |
+<%= link_to 'Back', player_stats_path %>
